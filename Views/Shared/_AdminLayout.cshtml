@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!--<link rel="stylesheet" href="~/css/dashboard.css" />-->
+</head>
+<body class="d-flex">
+    <div class="d-flex flex-column vh-100 flex-shrink-0 p-3 text-white bg-dark" style="width: 250px;">
+        <a href="/Admin/Index" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none"> 
+            <svg class="bi me-2" width="40" height="32"> </svg> 
+            <span class="fs-4">ExamSystem</span> </a> <hr> 
+            <ul class="nav nav-pills flex-column mb-auto"> 
+                @* <li class="nav-item"> <a href="#" class="nav-link active" aria-current="page"> 
+                    <i class="fa fa-home"></i><span class="ms-2">Home</span> </a> 
+                </li> *@
+                
+                <li> <a href="#" class="nav-link text-white"> <i class="fa fa-dashboard">
+                    </i><span class="ms-2">Dashboard</span> </a> 
+                </li>
+                
+                <li> <a href="#" class="nav-link text-white"> <i class="fa fa-first-order">
+                    </i><span class="ms-2">Question</span> </a> 
+                </li> 
+
+                <li> <a href="#" class="nav-link text-white"> <i class="fa fa-cog">
+                    </i><span class="ms-2">Settings</span> </a> 
+                </li> 
+
+                <li> <a href="#" class="nav-link text-white"> <i class="fa fa-bookmark">
+                    </i><span class="ms-2">Bookmarks</span> </a> 
+                </li> 
+            </ul> 
+            
+            <hr> 
+            
+            <div class="dropdown">
+                <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false"> 
+                    <strong> John W </strong> 
+                </a> 
+                <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1"> 
+                    <li><a class="dropdown-item" href="#">New project</a></li> 
+                    <li><a class="dropdown-item" href="#">Settings</a></li> 
+                    <li><a class="dropdown-item" href="#">Profile</a></li> 
+                    <li> <hr class="dropdown-divider"> </li> 
+                    <li><a class="dropdown-item" href="#">Sign out</a></li> 
+                </ul>
+            </div>
+    </div>
+    
+    <div class="flex-grow-1 bg-light">
+        <div class="container mt-5">
+			@RenderBody()
+        </div>
+    </div>
+</body>
+</html>
+
+<style>
+    body {
+        background-color: #eee;
+    }
+
+    .nav-link:hover {
+        background-color: #525252 !important;
+    }
+
+    .nav-link .fa {
+        transition: all 1s;
+    }
+
+    .nav-link:hover .fa {
+        transform: rotate(360deg);
+    }
+</style>
+
+<script>
+    // document.addEventListener("DOMContentLoaded", function (event) {
+
+    //     const showNavbar = (toggleId, navId, bodyId, headerId) => {
+    //         const toggle = document.getElementById(toggleId),
+    //             nav = document.getElementById(navId),
+    //             bodypd = document.getElementById(bodyId),
+    //             headerpd = document.getElementById(headerId)
+
+    //         Validate that all variables exist
+    //         if (toggle && nav && bodypd && headerpd) {
+    //             toggle.addEventListener('click', () => {
+    //                 show navbar
+    //                 nav.classList.toggle('show')
+    //                 change icon
+    //                 toggle.classList.toggle('bx-x')
+    //                 add padding to body
+    //                 bodypd.classList.toggle('body-pd')
+    //                 add padding to header
+    //                 headerpd.classList.toggle('body-pd')
+    //             })
+    //         }
+    //     }
+
+    //     showNavbar('header-toggle', 'nav-bar', 'body-pd', 'header')
+
+    //     /*===== LINK ACTIVE =====*/
+    //     const linkColor = document.querySelectorAll('.nav_link')
+
+    //     function colorLink() {
+    //         if (linkColor) {
+    //             linkColor.forEach(l => l.classList.remove('active'))
+    //             this.classList.add('active')
+    //         }
+    //     }
+    //     linkColor.forEach(l => l.addEventListener('click', colorLink))
+
+    //     Your code to run since DOM is loaded and ready
+    // });
+</script>   
